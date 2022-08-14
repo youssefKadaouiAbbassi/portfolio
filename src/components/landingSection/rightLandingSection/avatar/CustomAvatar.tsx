@@ -10,7 +10,7 @@ export const CustomAvatar: React.FC = () => {
       src={
         isMobile
           ? '/assets/images/mobileAvatar.png'
-          : '/assets/images/avatar.svg'
+          : '/assets/images/avatar.png'
       }
       width={width * (isMobile ? 750 / 768 : 600 / 1920)}
       height={width * (isMobile ? 750 / 768 : 600 / 1920)}
