@@ -2,17 +2,13 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Template as Component } from './Template';
+import { InfoSection as Component } from './InfoSection';
 import { theme } from '../../constant/theme';
 import { MantineProvider } from '@mantine/core';
 export default {
-  title: 'Template',
+  title: 'InfoSection',
   component: Component,
-  argTypes: {
-    number: {
-      control: { type: 'number', defaultValue: 1 },
-    },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Component>;
 
 const Story: ComponentStory<typeof Component> = (args) => (

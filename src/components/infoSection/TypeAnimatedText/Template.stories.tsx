@@ -2,17 +2,13 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Template as Component } from './Template';
-import { theme } from '../../constant/theme';
+import { TypeAnimatedText as Component } from './TypeAnimatedText';
+import { theme } from '../../../constant/theme';
 import { MantineProvider } from '@mantine/core';
 export default {
-  title: 'Template',
+  title: 'TypeAnimatedText',
   component: Component,
-  argTypes: {
-    number: {
-      control: { type: 'number', defaultValue: 1 },
-    },
-  },
+  argTypes: {},
 } as ComponentMeta<typeof Component>;
 
 const Story: ComponentStory<typeof Component> = (args) => (
@@ -23,4 +19,4 @@ const Story: ComponentStory<typeof Component> = (args) => (
 
 export const Default = Story.bind({});
 
-Default.args = {};
+Default.args = { sequences: ['Hello', 'World'] };
