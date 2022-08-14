@@ -2,11 +2,11 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { CustomAvatar as Component } from './CustomAvatar';
-import { theme } from '../../constant/theme';
+import { ButtonsSection as Component } from './ButtonsSection';
+import { theme } from '../../../../constant/theme';
 import { MantineProvider } from '@mantine/core';
 export default {
-  title: 'CustomAvatar',
+  title: 'ButtonsSection',
   component: Component,
   argTypes: {},
 } as ComponentMeta<typeof Component>;

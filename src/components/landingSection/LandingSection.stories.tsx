@@ -2,13 +2,17 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { LeftLandingSection as Component } from './LeftLandingSection';
+import { LandingSection as Component } from './LandingSection';
 import { theme } from '../../constant/theme';
 import { MantineProvider } from '@mantine/core';
 export default {
-  title: 'LeftLandingSection',
+  title: 'LandingSection',
   component: Component,
-  argTypes: {},
+  argTypes: {
+    number: {
+      control: { type: 'number', defaultValue: 1 },
+    },
+  },
 } as ComponentMeta<typeof Component>;
 
 const Story: ComponentStory<typeof Component> = (args) => (

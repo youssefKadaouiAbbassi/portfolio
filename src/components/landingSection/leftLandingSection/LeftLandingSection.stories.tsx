@@ -2,11 +2,11 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { InfoSection as Component } from './InfoSection';
+import { LeftLandingSection as Component } from './LeftLandingSection';
 import { theme } from '../../../constant/theme';
 import { MantineProvider } from '@mantine/core';
 export default {
-  title: 'InfoSection',
+  title: 'LeftLandingSection',
   component: Component,
   argTypes: {},
 } as ComponentMeta<typeof Component>;

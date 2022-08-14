@@ -8,7 +8,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: theme.fontSizes.sm,
     fontWeight: 600,
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-      fontSize: theme.fontSizes.sm - 10,
+      fontSize: theme.fontSizes.sm - 20,
     },
   },
   name: {
