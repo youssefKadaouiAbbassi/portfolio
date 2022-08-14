@@ -15,6 +15,7 @@ export const CustomAvatar: React.FC = () => {
       width={width * (isMobile ? 750 / 768 : 600 / 1920)}
       height={width * (isMobile ? 750 / 768 : 600 / 1920)}
       alt=""
+      priority
     />
   );
 };
