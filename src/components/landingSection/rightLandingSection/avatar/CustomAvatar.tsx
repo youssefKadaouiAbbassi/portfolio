@@ -6,7 +6,7 @@ export const CustomAvatar: React.FC = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const { width } = useViewportSize();
   return (
-    <Image
+    <img
       src={
         isMobile
           ? '/assets/images/mobileAvatar.png'
@@ -14,7 +14,7 @@ export const CustomAvatar: React.FC = () => {
       }
       width={width * (isMobile ? 750 / 768 : 600 / 1920)}
       height={width * (isMobile ? 750 / 768 : 600 / 1920)}
-      priority
+      alt=""
     />
   );
 };
