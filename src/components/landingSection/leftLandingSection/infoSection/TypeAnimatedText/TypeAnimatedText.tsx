@@ -27,6 +27,7 @@ export const TypeAnimatedText: React.FC = () => {
         t('studentAt'),
         2000,
         t('softwareEngineer'),
+        2000,
       ]}
       wrapper="div"
       cursor={true}
