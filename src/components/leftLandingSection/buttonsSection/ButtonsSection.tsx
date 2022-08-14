@@ -6,9 +6,8 @@ import {
   createStyles,
   ActionIcon,
 } from '@mantine/core';
-import LinkedinIcon from '../../../../public/assets/images/linkedin.svg';
-import GithubIcon from '../../../../public/assets/images/github.svg';
 import { useMediaQuery } from '@mantine/hooks';
+import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   calendly: {
@@ -44,14 +43,24 @@ export const ButtonsSection: React.FC = () => {
           radius="xl"
           className={classes.roundButton}
         >
-          <img src={LinkedinIcon} alt="" />
+          <Image
+            src="/assets/images/linkedin.svg"
+            alt=""
+            width={70}
+            height={70}
+          />
         </ActionIcon>
         <ActionIcon
           variant="subtle"
           radius="xl"
           className={classes.roundButton}
         >
-          <img src={GithubIcon} alt="" />
+          <Image
+            src="/assets/images/github.svg"
+            alt=""
+            width={70}
+            height={70}
+          />
         </ActionIcon>
       </Group>
     </Group>
