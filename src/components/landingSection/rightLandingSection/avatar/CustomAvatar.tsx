@@ -12,8 +12,8 @@ export const CustomAvatar: React.FC = () => {
           ? '/assets/images/mobileAvatar.png'
           : '/assets/images/avatar.svg'
       }
-      width={width * (isMobile ? 600 / 768 : 600 / 1920)}
-      height={width * (isMobile ? 600 / 768 : 600 / 1920)}
+      width={width * (isMobile ? 750 / 768 : 600 / 1920)}
+      height={width * (isMobile ? 750 / 768 : 600 / 1920)}
       priority
     />
   );

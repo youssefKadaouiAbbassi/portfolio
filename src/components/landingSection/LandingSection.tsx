@@ -8,7 +8,7 @@ export const LandingSection: React.FC = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   return isMobile ? (
     <Container px="xs" sx={{ marginTop: 40 }}>
-      <Stack spacing={250}>
+      <Stack spacing={200}>
         <LeftLandingSection />
         <RightLandingSection />
       </Stack>
