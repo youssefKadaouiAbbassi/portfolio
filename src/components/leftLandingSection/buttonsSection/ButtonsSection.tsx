@@ -6,8 +6,8 @@ import {
   createStyles,
   ActionIcon,
 } from '@mantine/core';
-import LinkedinIcon from '../../../public/assets/images/linkedin.svg';
-import GithubIcon from '../../../public/assets/images/github.svg';
+import LinkedinIcon from '../../../../public/assets/images/linkedin.svg';
+import GithubIcon from '../../../../public/assets/images/github.svg';
 import { useMediaQuery } from '@mantine/hooks';
 
 const useStyles = createStyles((theme) => ({

@@ -2,11 +2,11 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { TypeAnimatedText as Component } from './TypeAnimatedText';
+import { InfoSection as Component } from './InfoSection';
 import { theme } from '../../../constant/theme';
 import { MantineProvider } from '@mantine/core';
 export default {
-  title: 'TypeAnimatedText',
+  title: 'InfoSection',
   component: Component,
   argTypes: {},
 } as ComponentMeta<typeof Component>;
