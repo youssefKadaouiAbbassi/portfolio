@@ -14,7 +14,7 @@ export const CustomAvatar: React.FC = () => {
           : '/assets/images/avatar.svg'
       }
       size={width * (isMobile ? 600 / 768 : 600 / 1920)}
-      color={theme.colors.blue[0]}
+      color={theme.colors.purple[0]}
     />
   );
 };
