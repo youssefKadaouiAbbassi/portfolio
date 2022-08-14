@@ -8,6 +8,8 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import Image from 'next/image';
+import Link from 'next/link';
+import { actions } from '../../../../constant/actions';
 
 const useStyles = createStyles((theme) => ({
   calendly: {
@@ -39,38 +41,50 @@ export const ButtonsSection: React.FC = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   return (
     <Group spacing={isMobile ? 30 : 74}>
-      <Button
-        variant="gradient"
-        gradient={{ from: theme.colors.pink[0], to: theme.colors.purple[0] }}
-        className={classes.calendly}
-      >
-        Calendly
-      </Button>
+      <Link href={actions.calendly} passHref>
+        <Button
+          component="a"
+          target="_blank"
+          variant="gradient"
+          gradient={{ from: theme.colors.pink[0], to: theme.colors.purple[0] }}
+          className={classes.calendly}
+        >
+          Calendly
+        </Button>
+      </Link>
       <Group spacing={6}>
-        <ActionIcon
-          variant="subtle"
-          radius="xl"
-          className={classes.roundButton}
-        >
-          <Image
-            src="/assets/images/linkedin.svg"
-            alt=""
-            width={70}
-            height={70}
-          />
-        </ActionIcon>
-        <ActionIcon
-          variant="subtle"
-          radius="xl"
-          className={classes.roundButton}
-        >
-          <Image
-            src="/assets/images/github.svg"
-            alt=""
-            width={70}
-            height={70}
-          />
-        </ActionIcon>
+        <Link href={actions.linkedin} passHref>
+          <ActionIcon
+            component="a"
+            target="_blank"
+            variant="subtle"
+            radius="xl"
+            className={classes.roundButton}
+          >
+            <Image
+              src="/assets/images/linkedin.svg"
+              alt=""
+              width={70}
+              height={70}
+            />
+          </ActionIcon>
+        </Link>
+        <Link href={actions.github} passHref>
+          <ActionIcon
+            component="a"
+            target="_blank"
+            variant="subtle"
+            radius="xl"
+            className={classes.roundButton}
+          >
+            <Image
+              src="/assets/images/github.svg"
+              alt=""
+              width={70}
+              height={70}
+            />
+          </ActionIcon>
+        </Link>
       </Group>
     </Group>
   );
