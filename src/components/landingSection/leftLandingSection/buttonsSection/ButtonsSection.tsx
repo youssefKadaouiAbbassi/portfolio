@@ -10,18 +10,17 @@ import { useMediaQuery } from '@mantine/hooks';
 import Image from 'next/image';
 import Link from 'next/link';
 import { actions } from '../../../../constant/actions';
+import { useTranslation } from 'next-i18next';
 
 const useStyles = createStyles((theme) => ({
   calendly: {
     textColor: theme.colors.white,
     fontSize: '1.5vw',
     fontWeight: 600,
-    width: '11vw',
     height: '4vw',
     borderRadius: 10,
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       fontSize: theme.fontSizes.xs,
-      width: 210,
       height: 65,
     },
   },
@@ -38,6 +37,7 @@ const useStyles = createStyles((theme) => ({
 export const ButtonsSection: React.FC = () => {
   const { classes } = useStyles();
   const theme = useMantineTheme();
+  const { t } = useTranslation('landingSection');
   const isMobile = useMediaQuery('(max-width: 768px)');
   return (
     <Group spacing={isMobile ? 30 : 74}>
@@ -49,7 +49,7 @@ export const ButtonsSection: React.FC = () => {
           gradient={{ from: theme.colors.pink[0], to: theme.colors.purple[0] }}
           className={classes.calendly}
         >
-          Calendly
+          {t('bookAnAppointment')}
         </Button>
       </Link>
       <Group spacing={6}>
