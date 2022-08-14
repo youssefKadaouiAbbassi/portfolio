@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { useMediaQuery, useViewportSize } from '@mantine/hooks';
 
 export const CustomAvatar: React.FC = () => {
