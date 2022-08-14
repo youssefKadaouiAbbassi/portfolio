@@ -1,7 +1,7 @@
 import React from 'react';
 import { Center, Group } from '@mantine/core';
 import { LeftLandingSection } from './leftLandingSection/LeftLandingSection';
-import { CustomAvatar } from './avatar/CustomAvatar';
+import { CustomAvatar } from './rightLandingSection/avatar/CustomAvatar';
 
 export const LandingSection: React.FC = () => {
   return (
