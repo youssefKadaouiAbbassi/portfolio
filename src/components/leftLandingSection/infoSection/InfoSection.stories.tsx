@@ -3,7 +3,7 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { InfoSection as Component } from './InfoSection';
-import { theme } from '../../constant/theme';
+import { theme } from '../../../constant/theme';
 import { MantineProvider } from '@mantine/core';
 export default {
   title: 'InfoSection',
