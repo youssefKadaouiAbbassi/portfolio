@@ -5,7 +5,7 @@ import { createStyles } from '@mantine/core';
 const useStyles = createStyles((theme) => ({
   typedText: {
     color: theme.colors.black,
-    fontSize: theme.fontSizes.md,
+    fontSize: '3vw',
     fontWeight: 600,
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
       fontSize: theme.fontSizes.md - 25,

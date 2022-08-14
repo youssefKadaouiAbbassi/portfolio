@@ -1,15 +1,22 @@
 import React from 'react';
-import { Center, Group } from '@mantine/core';
+import { Center, Container, Stack } from '@mantine/core';
 import { LeftLandingSection } from './leftLandingSection/LeftLandingSection';
-import { CustomAvatar } from './rightLandingSection/avatar/CustomAvatar';
+import { RightLandingSection } from './rightLandingSection/RightLandingSection';
+import { useMediaQuery } from '@mantine/hooks';
 
 export const LandingSection: React.FC = () => {
-  return (
-    <Center>
-      <Group spacing={95}>
+  const isMobile = useMediaQuery('(max-width: 768px)');
+  return isMobile ? (
+    <Container px="xs" sx={{ marginTop: 40 }}>
+      <Stack spacing={250}>
         <LeftLandingSection />
-        <CustomAvatar />
-      </Group>
+        <RightLandingSection />
+      </Stack>
+    </Container>
+  ) : (
+    <Center>
+      <LeftLandingSection />
+      <RightLandingSection />
     </Center>
   );
 };

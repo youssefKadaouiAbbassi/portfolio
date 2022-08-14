@@ -5,15 +5,15 @@ import { TypeAnimatedText } from './TypeAnimatedText/TypeAnimatedText';
 const useStyles = createStyles((theme) => ({
   im: {
     color: theme.colors.pink,
-    fontSize: theme.fontSizes.sm,
+    fontSize: '2vw',
     fontWeight: 600,
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
-      fontSize: theme.fontSizes.sm - 20,
+      fontSize: theme.fontSizes.sm - 15,
     },
   },
   name: {
     color: theme.colors.black,
-    fontSize: theme.fontSizes.xl,
+    fontSize: '4.5vw',
     fontWeight: 700,
     lineHeight: 1,
     [`@media (max-width: ${theme.breakpoints.sm}px)`]: {

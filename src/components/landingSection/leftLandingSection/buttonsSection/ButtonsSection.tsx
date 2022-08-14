@@ -12,15 +12,24 @@ import Image from 'next/image';
 const useStyles = createStyles((theme) => ({
   calendly: {
     textColor: theme.colors.white,
-    fontSize: theme.fontSizes.xs,
+    fontSize: '1.5vw',
     fontWeight: 600,
-    width: 210,
-    height: 65,
+    width: '11vw',
+    height: '4vw',
     borderRadius: 10,
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      fontSize: theme.fontSizes.xs,
+      width: 210,
+      height: 65,
+    },
   },
   roundButton: {
-    width: 70,
-    height: 70,
+    width: '4vw',
+    height: '4vw',
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      width: 70,
+      height: 70,
+    },
   },
 }));
 
