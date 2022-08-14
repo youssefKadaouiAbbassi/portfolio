@@ -9,6 +9,7 @@ export const theme = {
   },
   fontSizes: {
     sm: 40,
+    md: 52,
     xl: 73,
   },
 } as MantineThemeOverride;
