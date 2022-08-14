@@ -12,4 +12,7 @@ export const theme = {
     md: 52,
     xl: 73,
   },
+  breakpoints: {
+    sm: 768,
+  },
 } as MantineThemeOverride;
