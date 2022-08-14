@@ -3,7 +3,7 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { MantineProvider } from '@mantine/core';
 import { theme } from '../src/constant/theme';
-import { appWithTranslation} from 'next-i18next';
+import { appWithTranslation } from 'next-i18next';
 
 function App(props: AppProps) {
   const { Component, pageProps } = props;

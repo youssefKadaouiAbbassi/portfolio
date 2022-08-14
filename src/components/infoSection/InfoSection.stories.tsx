@@ -2,9 +2,7 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Template as Component } from './Template';
-import { theme } from '../../constant/theme';
-import { MantineProvider } from '@mantine/core';
+import { InfoSection as Component } from './InfoSection';
 export default {
   title: 'Template',
   component: Component,
@@ -16,9 +14,7 @@ export default {
 } as ComponentMeta<typeof Component>;
 
 const Story: ComponentStory<typeof Component> = (args) => (
-  <MantineProvider withGlobalStyles withNormalizeCSS theme={theme}>
-    <Component {...args} />
-  </MantineProvider>
+  <Component {...args} />
 );
 
 export const Default = Story.bind({});
