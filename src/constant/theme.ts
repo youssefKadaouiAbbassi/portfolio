@@ -8,6 +8,7 @@ export const theme = {
     pink: ['#bd00ff'],
   },
   fontSizes: {
+    xs: 24,
     sm: 40,
     md: 52,
     xl: 73,
