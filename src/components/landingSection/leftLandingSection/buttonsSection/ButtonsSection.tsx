@@ -66,6 +66,7 @@ export const ButtonsSection: React.FC = () => {
               alt=""
               width={70}
               height={70}
+              priority
             />
           </ActionIcon>
         </Link>
@@ -82,6 +83,7 @@ export const ButtonsSection: React.FC = () => {
               alt=""
               width={70}
               height={70}
+              priority
             />
           </ActionIcon>
         </Link>
