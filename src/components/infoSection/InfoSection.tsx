@@ -1,6 +1,5 @@
 import React from 'react';
 import { createStyles, Stack, Text } from '@mantine/core';
-import { useTranslation } from 'next-i18next';
 import { TypeAnimation } from 'react-type-animation';
 
 const useStyles = createStyles((theme) => ({
