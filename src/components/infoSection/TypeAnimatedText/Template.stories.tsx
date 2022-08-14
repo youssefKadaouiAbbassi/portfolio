@@ -19,4 +19,4 @@ const Story: ComponentStory<typeof Component> = (args) => (
 
 export const Default = Story.bind({});
 
-Default.args = { sequences: ['Hello', 'World'] };
+Default.args = {};

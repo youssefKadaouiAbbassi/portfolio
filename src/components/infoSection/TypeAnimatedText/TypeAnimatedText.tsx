@@ -7,21 +7,25 @@ const useStyles = createStyles((theme) => ({
     color: theme.colors.black,
     fontSize: theme.fontSizes.md,
     fontWeight: 600,
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      fontSize: theme.fontSizes.md - 25,
+    },
   },
 }));
 
-interface TypeAnimatedTextProps {
-  sequences: string[];
-}
-
-export const TypeAnimatedText: React.FC<TypeAnimatedTextProps> = ({
-  sequences,
-}) => {
+export const TypeAnimatedText: React.FC = () => {
   const { classes } = useStyles();
   return (
     <TypeAnimation
-      sequence={sequences.map((sequence) => [sequence, 2000]).flat()}
-      speed={10}
+      sequence={[
+        'Lead Dev chez Goodwave',
+        1000,
+        "Co-founder d'Overa",
+        1000,
+        "Etudiant à l'EPITA",
+        1000,
+        'Software Engineer',
+      ]}
       wrapper="div"
       cursor={true}
       repeat={Infinity}

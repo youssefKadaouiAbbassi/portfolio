@@ -1,18 +1,24 @@
 import React from 'react';
 import { createStyles, Stack, Text } from '@mantine/core';
-import { TypeAnimation } from 'react-type-animation';
+import { TypeAnimatedText } from './TypeAnimatedText/TypeAnimatedText';
 
 const useStyles = createStyles((theme) => ({
   im: {
     color: theme.colors.pink,
     fontSize: theme.fontSizes.sm,
     fontWeight: 600,
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      fontSize: theme.fontSizes.sm - 10,
+    },
   },
   name: {
     color: theme.colors.black,
     fontSize: theme.fontSizes.xl,
     fontWeight: 700,
     lineHeight: 1,
+    [`@media (max-width: ${theme.breakpoints.sm}px)`]: {
+      fontSize: theme.fontSizes.xl - 40,
+    },
   },
 }));
 
@@ -25,14 +31,7 @@ export const InfoSection: React.FC = () => {
         <Text className={classes.name}>YOUSSEF KADAOUI</Text>
         <Text className={classes.name}>ABBASSI</Text>
       </Stack>
-      <TypeAnimation
-        sequence={[
-          'Lead Dev chez Goodwave',
-          "Co-founder d'Overa",
-          "Etudiant à l'EPITA",
-          'Software Engineer',
-        ]}
-      />
+      <TypeAnimatedText />
     </Stack>
   );
 };
