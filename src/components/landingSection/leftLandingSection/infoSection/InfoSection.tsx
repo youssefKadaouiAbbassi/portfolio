@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStyles, Stack, Text } from '@mantine/core';
 import { TypeAnimatedText } from './TypeAnimatedText/TypeAnimatedText';
+import { useTranslation } from 'next-i18next';
 
 const useStyles = createStyles((theme) => ({
   im: {
@@ -24,9 +25,10 @@ const useStyles = createStyles((theme) => ({
 
 export const InfoSection: React.FC = () => {
   const { classes } = useStyles();
+  const { t } = useTranslation('landingSection');
   return (
     <Stack spacing="sm">
-      <Text className={classes.im}>{"I'm"}</Text>
+      <Text className={classes.im}>{t('im')}</Text>
       <Stack>
         <Text className={classes.name}>YOUSSEF KADAOUI</Text>
         <Text className={classes.name}>ABBASSI</Text>

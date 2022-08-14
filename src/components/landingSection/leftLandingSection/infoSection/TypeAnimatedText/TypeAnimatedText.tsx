@@ -1,6 +1,7 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { createStyles } from '@mantine/core';
+import { useTranslation } from 'next-i18next';
 
 const useStyles = createStyles((theme) => ({
   typedText: {
@@ -15,16 +16,17 @@ const useStyles = createStyles((theme) => ({
 
 export const TypeAnimatedText: React.FC = () => {
   const { classes } = useStyles();
+  const { t } = useTranslation('landingSection');
   return (
     <TypeAnimation
       sequence={[
-        'Lead Dev chez Goodwave',
-        1000,
-        "Co-founder d'Overa",
-        1000,
-        "Etudiant à l'EPITA",
-        1000,
-        'Software Engineer',
+        t('leadDevGoodwave'),
+        2000,
+        t('coFounder'),
+        2000,
+        t('studentAt'),
+        2000,
+        t('SoftwareEngineer'),
       ]}
       wrapper="div"
       cursor={true}
