@@ -1,6 +1,7 @@
 import React from 'react';
 import { createStyles, Stack, Text } from '@mantine/core';
 import { useTranslation } from 'next-i18next';
+import { TypeAnimation } from 'react-type-animation';
 
 const useStyles = createStyles((theme) => ({
   im: {
@@ -14,11 +15,6 @@ const useStyles = createStyles((theme) => ({
     fontWeight: 700,
     lineHeight: 1,
   },
-  job: {
-    color: theme.colors.black,
-    fontSize: theme.fontSizes.md,
-    fontWeight: 600,
-  },
 }));
 
 export const InfoSection: React.FC = () => {
@@ -31,7 +27,14 @@ export const InfoSection: React.FC = () => {
         <Text className={classes.name}>YOUSSEF KADAOUI</Text>
         <Text className={classes.name}>ABBASSI</Text>
       </Stack>
-      <Text className={classes.job}>{t('App Designer')}</Text>
+      <TypeAnimation
+        sequence={[
+          'Lead Dev chez Goodwave',
+          "Co-founder d'Overa",
+          "Etudiant à l'EPITA",
+          'Software Engineer',
+        ]}
+      />
     </Stack>
   );
 };
