@@ -19,7 +19,6 @@ const useStyles = createStyles((theme) => ({
 
 export const InfoSection: React.FC = () => {
   const { classes } = useStyles();
-  const { t } = useTranslation('landingSection');
   return (
     <Stack spacing="sm">
       <Text className={classes.im}>{"I'm"}</Text>
