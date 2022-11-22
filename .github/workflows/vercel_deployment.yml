@@ -1,14 +1,19 @@
-name: Vercel depl
-on: [push]
+name: Vercel Deployment
+on:
+  pull_request:
+  push:
+    branches:
+      - '*'
 jobs:
-  build:
+  auto-commit:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Add commit to any branch
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-          git checkout -b ${{ github.ref }}
-          git commit --allow-empty -m "Vercel deployment"
-          git push origin ${{ github.ref }}
+        with:
+          ref: ${{ github.head_ref }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Vercel Deployment
+          commit_options: '--no-verify --allow-empty'
+          token: ${{ secrets.API_TOKEN_GITHUB }}
+
