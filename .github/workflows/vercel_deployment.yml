@@ -11,9 +11,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+          token: ${{ secrets.API_TOKEN_GITHUB }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Vercel Deployment
           commit_options: '--no-verify --allow-empty'
-          token: ${{ secrets.API_TOKEN_GITHUB }}
 
