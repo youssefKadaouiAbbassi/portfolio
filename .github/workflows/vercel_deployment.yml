@@ -8,7 +8,7 @@ jobs:
   auto-commit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.API_TOKEN_GITHUB }}
@@ -17,5 +17,4 @@ jobs:
           commit_message: Vercel Deployment
           commit_options: '--no-verify --allow-empty'
           commit_author: Author <actions@github.com>
-          
-
+          skip_dirty_check: true
