@@ -1,4 +1,4 @@
-name: Vercel Deployment
+name: DeployBot
 on:
   pull_request:
   push:
@@ -6,7 +6,7 @@ on:
       - '*'
 jobs:
   auto-commit:
-    if: github.event.head_commit.message != 'Vercel Deployment'
+    if: github.event.head_commit.message != 'Deploy to Vercel'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -15,6 +15,7 @@ jobs:
           token: ${{ secrets.API_TOKEN_GITHUB }}
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
+          commit_user_name: DeployBot
           commit_message: Vercel Deployment
           commit_options: '--no-verify --allow-empty'
           commit_author: Author <actions@github.com>
