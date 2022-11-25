@@ -21,5 +21,6 @@ jobs:
         with:
           commit_message: 'Deploy to Vercel'
           commit_options: '--no-verify --allow-empty'
+          commit_user_name: DeployBot
           commit_author: Author <actions@github.com>
           skip_dirty_check: true
