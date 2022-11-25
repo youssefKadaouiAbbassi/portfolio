@@ -1,5 +1,4 @@
- 
- name: DeployBot
+name: DeployBot
 on:
   pull_request:
   push:
