@@ -3,8 +3,6 @@ on:
   push:
     tags:
       - 'deployBot'
-    branches:
-      - '*'
 jobs:
   auto-commit:
     runs-on: ubuntu-latest
