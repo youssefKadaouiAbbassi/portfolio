@@ -1,6 +1,5 @@
 name: DeployBot
 on:
-  pull_request:
   push:
     tags:
       - 'deployBot'
