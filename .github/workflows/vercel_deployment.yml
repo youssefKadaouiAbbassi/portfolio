@@ -1,10 +1,12 @@
 name: DeployBot
 on:
+  pull_request:
   push:
-    tags:
-      - 'deployBot'
+    branches:
+      - '*'
 jobs:
   auto-commit:
+    if: github.tag_name == 'deployBot'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
