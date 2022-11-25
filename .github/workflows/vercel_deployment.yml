@@ -6,7 +6,7 @@ on:
       - '*'
 jobs:
   auto-commit:
-    if: github.event.release.tag_name == 'deployBot'
+    if: github.event.commits[0].author.name == 'DeployBot'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
