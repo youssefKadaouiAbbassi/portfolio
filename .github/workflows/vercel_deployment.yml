@@ -2,11 +2,11 @@ name: DeployBot
 on:
   pull_request:
   push:
+    tags: ['v[0-9].[0-9]+.[0-9]+']
     branches:
       - '*'
 jobs:
   auto-commit:
-    if: github.event.head_commit.message != 'Deploy to Vercel'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,7 +16,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_user_name: DeployBot
-          commit_message: Deploy to Vercel
+          commit_message: 'Deploy to Vercel'
           commit_options: '--no-verify --allow-empty'
           commit_author: Author <actions@github.com>
           skip_dirty_check: true
